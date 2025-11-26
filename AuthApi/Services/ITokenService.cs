@@ -1,6 +1,10 @@
-﻿namespace AuthApi.Services
+﻿using AuthApi.Models;
+
+namespace AuthApi.Services
 {
-    public class ITokenService
+
+    public interface ITokenService
     {
+        string GenerateToken(User user);
     }
 }

@@ -1,6 +1,10 @@
-﻿namespace AuthApi.Services
+﻿using AuthApi.Models;
+
+namespace AuthApi.Services
 {
-    public class IAuthService
+    public interface IAuthService
     {
+        Task<AuthResponse> RegisterAsync(RegisterRequest request);
+        Task<AuthResponse> LoginAsync(LoginRequest request);
     }
 }
